@@ -78,7 +78,7 @@ export default function Footer() {
               Get in Touch
             </h4>
             <ul className="space-y-3 text-sm text-brand-gray-400">
-              <li>Beverly Hills, California</li>
+              <li>Santa Monica, California</li>
               <li>
                 <a href="mailto:info@oceanparkfinance.com" className="hover:text-brand-purple transition-colors">
                   info@oceanparkfinance.com

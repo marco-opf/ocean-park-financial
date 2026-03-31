@@ -79,14 +79,16 @@ export default function AboutPage() {
               <div className="sticky top-28">
                 <div className="aspect-[3/4] rounded-2xl bg-gradient-to-br from-brand-purple/20 to-brand-purple/5 border border-brand-purple/20 flex items-center justify-center relative overflow-hidden">
                   <div className="text-center p-8">
-                    <div className="w-28 h-28 mx-auto mb-6 rounded-full bg-brand-purple/20 flex items-center justify-center">
-                      <span className="text-5xl font-bold text-brand-purple">TP</span>
-                    </div>
+                    <img
+                      src="/toni-peneva.png"
+                      alt="Toni Peneva, CPA"
+                      className="w-28 h-28 mx-auto mb-6 rounded-full object-cover object-top"
+                    />
                     <p className="text-white font-bold text-2xl mb-1">Toni Peneva</p>
                     <p className="text-brand-purple text-sm font-medium mb-4">CPA</p>
                     <p className="text-brand-gray-400 text-sm">Founder &amp; CEO</p>
                     <p className="text-brand-gray-400 text-sm">Ocean Park Financial, LLC</p>
-                    <p className="text-brand-gray-400 text-sm mt-1">Beverly Hills, California</p>
+                    <p className="text-brand-gray-400 text-sm mt-1">Santa Monica, California</p>
 
                     <div className="mt-8 pt-6 border-t border-white/10">
                       <p className="text-brand-gray-400 text-xs mb-3">Education</p>

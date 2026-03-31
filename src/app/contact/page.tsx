@@ -179,7 +179,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <p className="text-brand-gray-400 text-xs mb-1">Location</p>
-                        <p className="text-white text-sm">Beverly Hills, California</p>
+                        <p className="text-white text-sm">Santa Monica, California</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
@@ -242,7 +242,7 @@ export default function ContactPage() {
             </Collapsible>
             <Collapsible title="Do you work with companies outside of California?">
               <p>
-                Yes! While we&apos;re based in Beverly Hills, we work with companies across the United States. Most of our engagements are conducted virtually, with in-person meetings available for Los Angeles-area clients.
+                Yes! While we&apos;re based in Santa Monica, we work with companies across the United States. Most of our engagements are conducted virtually, with in-person meetings available for Los Angeles-area clients.
               </p>
             </Collapsible>
             <Collapsible title="How quickly can you start?">

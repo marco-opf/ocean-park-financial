@@ -3,10 +3,9 @@ import SectionHeading from "@/components/SectionHeading";
 import Collapsible from "@/components/Collapsible";
 
 const stats = [
-  { value: "15+", label: "Years of Experience" },
+  { value: "20+", label: "Years of Experience" },
   { value: "50+", label: "Companies Served" },
   { value: "$500M+", label: "In Transactions Managed" },
-  { value: "4", label: "Core Industries" },
 ];
 
 const services = [
@@ -111,24 +110,12 @@ export default function Home() {
         />
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-8 lg:px-16 py-40 lg:py-48">
-          <p className="text-brand-purple font-semibold text-xs tracking-[0.25em] uppercase mb-10">
-            A Fractional CFO&apos;s Playbook for Founders
-          </p>
-
-          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white leading-[0.9] tracking-tight mb-8">
+          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-white leading-[0.9] tracking-tight mb-16">
             The Financial
             <br />
             <span className="text-brand-purple">Clarity</span> You
             <br className="hidden sm:block" /> Need
           </h1>
-
-          <p className="text-brand-gray-300 text-xl md:text-2xl max-w-lg mb-4 leading-snug font-light">
-            What Founders Get Wrong About Cash
-          </p>
-
-          <p className="text-brand-gray-500 text-sm mb-16 tracking-wide">
-            For bootstrapped, funded &amp; pre-funding founders
-          </p>
 
           <div className="flex flex-col sm:flex-row gap-5">
             <Link
@@ -159,7 +146,7 @@ export default function Home() {
       {/* ==================== STATS ==================== */}
       <section className="relative border-y border-white/10" style={{ backgroundColor: "#0E0E0E" }}>
         <div className="max-w-7xl mx-auto px-8 lg:px-16 py-16 lg:py-20">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+          <div className="grid grid-cols-3 gap-12 lg:gap-16">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center">
                 <p className="text-4xl lg:text-5xl font-black text-brand-purple tracking-tight">
@@ -223,12 +210,14 @@ export default function Home() {
                 }}
               >
                 <div className="text-center px-10">
-                  <div className="w-24 h-24 mx-auto mb-8 rounded-full flex items-center justify-center" style={{ backgroundColor: "rgba(183,148,246,0.15)" }}>
-                    <span className="text-4xl font-black text-brand-purple">TP</span>
-                  </div>
+                  <img
+                    src="/toni-peneva.png"
+                    alt="Toni Peneva, CPA"
+                    className="w-32 h-32 mx-auto mb-8 rounded-full object-cover object-top"
+                  />
                   <p className="text-white font-bold text-2xl mb-2">Toni Peneva, CPA</p>
                   <p className="text-brand-gray-400 text-base mb-1">Founder &amp; CEO</p>
-                  <p className="text-brand-gray-500 text-sm">Beverly Hills, California</p>
+                  <p className="text-brand-gray-500 text-sm">Santa Monica, California</p>
                 </div>
                 {/* left accent */}
                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-brand-purple" />
