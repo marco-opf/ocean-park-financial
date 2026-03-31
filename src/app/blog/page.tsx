@@ -47,7 +47,7 @@ const posts = [
   {
     title: "The True Cost of Bad Bookkeeping for Startups",
     excerpt:
-      "Messy books don't just create tax headaches — they erode investor confidence, lead to bad decisions, and can cost you your next round.",
+      "Messy books don't just create tax headaches â they erode investor confidence, lead to bad decisions, and can cost you your next round.",
     date: "November 2025",
     readTime: "5 min read",
     category: "Accounting",
@@ -187,33 +187,6 @@ export default function BlogPage() {
         </div>
       </section>
 
-      {/* Newsletter CTA */}
-      <section
-        className="py-28 border-y border-white/10"
-        style={{
-          background: "linear-gradient(135deg, rgba(183,148,246,0.06) 0%, #0E0E0E 50%, rgba(183,148,246,0.06) 100%)",
-        }}
-      >
-        <div className="max-w-4xl mx-auto px-8 lg:px-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tight">
-            Stay <span className="text-brand-purple">Informed</span>
-          </h2>
-          <p className="text-brand-gray-300 text-lg mb-12 max-w-2xl mx-auto font-light">
-            Get financial insights delivered to your inbox. No spam, just actionable advice for founders.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="your@email.com"
-              className="flex-1 px-6 py-4 rounded-xl bg-brand-black text-white placeholder:text-brand-gray-500 focus:outline-none transition-colors"
-              style={{ border: "1px solid rgba(255,255,255,0.1)" }}
-            />
-            <button className="px-8 py-4 bg-brand-purple text-brand-black font-bold rounded-xl hover:bg-brand-purple-light transition-colors">
-              Subscribe
-            </button>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
