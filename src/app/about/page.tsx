@@ -79,14 +79,16 @@ export default function AboutPage() {
               <div className="sticky top-28">
                 <div className="aspect-[3/4] rounded-2xl bg-gradient-to-br from-brand-purple/20 to-brand-purple/5 border border-brand-purple/20 flex items-center justify-center relative overflow-hidden">
                   <div className="text-center p-8">
-                    <div className="w-28 h-28 mx-auto mb-6 rounded-full bg-brand-purple/20 flex items-center justify-center">
-                      <span className="text-5xl font-bold text-brand-purple">TP</span>
-                    </div>
+                    <img
+                      src="/toni-peneva.png"
+                      alt="Toni Peneva, CPA"
+                      className="w-28 h-28 mx-auto mb-6 rounded-full object-cover object-top"
+                    />
                     <p className="text-white font-bold text-2xl mb-1">Toni Peneva</p>
                     <p className="text-brand-purple text-sm font-medium mb-4">CPA</p>
                     <p className="text-brand-gray-400 text-sm">Founder &amp; CEO</p>
                     <p className="text-brand-gray-400 text-sm">Ocean Park Financial, LLC</p>
-                    <p className="text-brand-gray-400 text-sm mt-1">Beverly Hills, California</p>
+                    <p className="text-brand-gray-400 text-sm mt-1">Santa Monica, California</p>
 
                     <div className="mt-8 pt-6 border-t border-white/10">
                       <p className="text-brand-gray-400 text-xs mb-3">Education</p>
@@ -109,7 +111,7 @@ export default function AboutPage() {
                   At the helm of the Ocean Park Financial team is CEO Toni Peneva, whose finance journey began on Wall Street, supporting a managing director at a prominent hedge fund. After earning her CPA, Toni spent a decade in public accounting and then expanded her impact through fractional CFO roles.
                 </p>
                 <p>
-                  Driven by a passion for the business domain, she has spent the past 15 years working alongside iconic founders and innovative tech companies from Silicon Valley to Silicon Beach.
+                  Drived by a passion for the business domain, she has spent the past 15 years working alongside iconic founders and innovative tech companies from Silicon Valley to Silicon Beach.
                 </p>
                 <p>
                   Toni serves as a dynamic CFO in a contract capacity, specializing in the intersection of finance and operational excellence within the Tech, Media, Consumer Packaged Goods (CPG), and Venture Capital (VC) sectors.
@@ -122,19 +124,6 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <div className="mt-8">
-                <a
-                  href="https://www.linkedin.com/in/tonipenevacpa/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-brand-purple font-medium hover:text-brand-purple-light transition-colors"
-                >
-                  Connect on LinkedIn
-                  <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-              </div>
             </div>
           </div>
         </div>
