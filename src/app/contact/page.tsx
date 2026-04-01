@@ -15,8 +15,11 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Form submission logic here
-    alert("Thank you! We'll be in touch within 24 hours.");
+    const subject = encodeURIComponent(`New inquiry from ${formData.name} - ${formData.company || 'No company'}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nAnnual Revenue: ${formData.revenue}\nService Interest: ${formData.service}\n\nMessage:\n${formData.message}`
+    );
+    window.location.href = `mailto:info@oceanparkfinancial.co?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -101,9 +104,9 @@ export default function ContactPage() {
                     >
                       <option value="" className="bg-brand-dark">Select range</option>
                       <option value="pre-revenue" className="bg-brand-dark">Pre-Revenue</option>
-                      <option value="0-1m" className="bg-brand-dark">$0 – $1M</option>
-                      <option value="1-5m" className="bg-brand-dark">$1M – $5M</option>
-                      <option value="5-20m" className="bg-brand-dark">$5M – $20M</option>
+                      <option value="0-1m" className="bg-brand-dark">$0 â $1M</option>
+                      <option value="1-5m" className="bg-brand-dark">$1M â $5M</option>
+                      <option value="5-20m" className="bg-brand-dark">$5M â $20M</option>
                       <option value="20m+" className="bg-brand-dark">$20M+</option>
                     </select>
                   </div>
@@ -165,8 +168,8 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <p className="text-brand-gray-400 text-xs mb-1">Email</p>
-                        <a href="mailto:info@oceanparkfinance.com" className="text-white text-sm hover:text-brand-purple transition-colors">
-                          info@oceanparkfinance.com
+                        <a href="mailto:info@oceanparkfinancial.co" className="text-white text-sm hover:text-brand-purple transition-colors">
+                          info@oceanparkfinancial.co
                         </a>
                       </div>
                     </div>
@@ -179,25 +182,7 @@ export default function ContactPage() {
                       </div>
                       <div>
                         <p className="text-brand-gray-400 text-xs mb-1">Location</p>
-                        <p className="text-white text-sm">Beverly Hills, California</p>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-lg bg-brand-purple/10 flex items-center justify-center text-brand-purple shrink-0">
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <p className="text-brand-gray-400 text-xs mb-1">LinkedIn</p>
-                        <a
-                          href="https://www.linkedin.com/in/tonipenevacpa/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-white text-sm hover:text-brand-purple transition-colors"
-                        >
-                          Toni Peneva, CPA
-                        </a>
+                        <p className="text-white text-sm">Santa Monica, California</p>
                       </div>
                     </div>
                   </div>
@@ -242,12 +227,12 @@ export default function ContactPage() {
             </Collapsible>
             <Collapsible title="Do you work with companies outside of California?">
               <p>
-                Yes! While we&apos;re based in Beverly Hills, we work with companies across the United States. Most of our engagements are conducted virtually, with in-person meetings available for Los Angeles-area clients.
+                Yes! While we&apos;re based in Santa Monica, we work with companies across the United States. Most of our engagements are conducted virtually, with in-person meetings available for Los Angeles-area clients.
               </p>
             </Collapsible>
             <Collapsible title="How quickly can you start?">
               <p>
-                For most engagements, we can begin within 1–2 weeks of signing. For urgent situations like fundraising support or audit preparation, we can often accommodate faster timelines.
+                For most engagements, we can begin within 1â2 weeks of signing. For urgent situations like fundraising support or audit preparation, we can often accommodate faster timelines.
               </p>
             </Collapsible>
             <Collapsible title="What's the minimum engagement length?">
