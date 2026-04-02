@@ -46,3 +46,18 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #B794F6;
 }
+
+@keyframes logo-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.logo-track {
+  display: flex;
+  width: max-content;
+  animation: logo-scroll 45s linear infinite;
+}
+
+.logo-track:hover {
+  animation-play-state: paused;
+}

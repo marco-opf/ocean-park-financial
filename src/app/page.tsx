@@ -42,25 +42,23 @@ const industries = [
   { name: "Venture Capital", description: "Fund accounting, portfolio management, and LP reporting" },
 ];
 
-const testimonials = [
-  {
-    quote:
-      "Toni transformed our financial operations. Her strategic insight helped us navigate a critical growth phase and secure our Series B.",
-    name: "Sarah Chen",
-    title: "CEO, TechFlow AI",
-  },
-  {
-    quote:
-      "Having Toni as our fractional CFO was like having a full-time executive on our side. She brought clarity to our financial chaos.",
-    name: "Marcus Williams",
-    title: "Founder, Evergreen Media",
-  },
-  {
-    quote:
-      "Ocean Park Financial helped us optimize our burn rate and extend our runway by 18 months. Invaluable partner for any startup.",
-    name: "David Park",
-    title: "COO, NovaBrands CPG",
-  },
+const clients = [
+  { name: "Silicon Valley Bank",           src: "https://logo.clearbit.com/svb.com" },
+  { name: "Science Inc.",                  src: "https://logo.clearbit.com/science-inc.com" },
+  { name: "Pray",                          src: "https://logo.clearbit.com/pray.com" },
+  { name: "Biite",                         src: "https://logo.clearbit.com/biite.club" },
+  { name: "E-Studio",                      src: "https://logo.clearbit.com/estudio.co" },
+  { name: "Suu",                           src: "https://logo.clearbit.com/enjoysuu.com" },
+  { name: "BeatPitch",                     src: "https://logo.clearbit.com/beatpitch.ai" },
+  { name: "Lunch Bunch",                   src: "https://logo.clearbit.com/lunchbunch.com" },
+  { name: "Lunch Bunch Community Foundation", src: "https://logo.clearbit.com/lunchbunchcf.org" },
+  { name: "Final Boss Sour",               src: "https://logo.clearbit.com/finalbosssour.com" },
+  { name: "Fora Partners",                 src: "https://logo.clearbit.com/forapartners.com" },
+  { name: "Cognitik",                      src: "https://logo.clearbit.com/cognitik.com" },
+  { name: "Adlogica",                      src: "https://logo.clearbit.com/adlogica.io" },
+  { name: "QuickBooks",                    src: "https://logo.clearbit.com/quickbooks.intuit.com" },
+  { name: "AWS",                           src: "https://logo.clearbit.com/aws.amazon.com" },
+  { name: "Bill",                          src: "https://logo.clearbit.com/bill.com" },
 ];
 
 const faqs = [
@@ -318,45 +316,49 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ==================== TESTIMONIALS ==================== */}
-      <section className="py-28 lg:py-36" style={{ backgroundColor: "#0E0E0E" }}>
-        <div className="max-w-7xl mx-auto px-8 lg:px-16">
-          <SectionHeading
-            eyebrow="Client Testimonials"
-            title="Trusted by"
-            highlight="Founders"
-          />
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial) => (
+      {/* ==================== CLIENTS & PARTNERS ==================== */}
+      <section className="py-20 overflow-hidden" style={{ backgroundColor: "#0E0E0E", borderTop: "1px solid rgba(255,255,255,0.05)", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+        <div className="text-center mb-14">
+          <p className="text-brand-purple font-semibold text-xs tracking-[0.25em] uppercase">
+            Clients &amp; Partners
+          </p>
+        </div>
+        <div className="relative">
+          {/* Fade edges */}
+          <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-32 z-10" style={{ background: "linear-gradient(to right, #0E0E0E, transparent)" }} />
+          <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-32 z-10" style={{ background: "linear-gradient(to left, #0E0E0E, transparent)" }} />
+          {/* Scrolling track — duplicated for seamless loop */}
+          <div className="logo-track">
+            {[...clients, ...clients].map((client, i) => (
               <div
-                key={testimonial.name}
-                className="relative p-10 rounded-2xl"
-                style={{
-                  backgroundColor: "#0A0A0A",
-                  border: "1px solid rgba(255,255,255,0.06)",
-                }}
+                key={i}
+                className="flex-none flex items-center justify-center px-10"
+                style={{ height: 48 }}
+                title={client.name}
               >
-                <div className="text-brand-purple text-6xl font-serif leading-none mb-6 opacity-30">
-                  &ldquo;
-                </div>
-                <p className="text-brand-gray-200 leading-relaxed mb-10 text-base">
-                  {testimonial.quote}
-                </p>
-                <div className="flex items-center gap-4">
-                  <div
-                    className="w-12 h-12 rounded-full flex items-center justify-center text-brand-purple text-sm font-bold"
-                    style={{ backgroundColor: "rgba(183,148,246,0.12)" }}
-                  >
-                    {testimonial.name
-                      .split(" ")
-                      .map((n) => n[0])
-                      .join("")}
-                  </div>
-                  <div>
-                    <p className="text-white font-semibold text-sm">{testimonial.name}</p>
-                    <p className="text-brand-gray-500 text-xs mt-0.5">{testimonial.title}</p>
-                  </div>
-                </div>
+                <img
+                  src={client.src}
+                  alt={client.name}
+                  style={{
+                    maxHeight: 36,
+                    maxWidth: 140,
+                    objectFit: "contain",
+                    filter: "brightness(0) invert(1)",
+                    opacity: 0.55,
+                  }}
+                  onError={(e) => {
+                    const img = e.currentTarget as HTMLImageElement;
+                    img.style.display = "none";
+                    const fallback = img.nextElementSibling as HTMLElement;
+                    if (fallback) fallback.style.display = "block";
+                  }}
+                />
+                <span
+                  style={{ display: "none" }}
+                  className="text-white/40 font-semibold text-sm tracking-wider uppercase whitespace-nowrap"
+                >
+                  {client.name}
+                </span>
               </div>
             ))}
           </div>
