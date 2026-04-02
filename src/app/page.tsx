@@ -299,12 +299,12 @@ export default function Home() {
       </section>
 
       {/* ==================== CLIENTS & PARTNERS ==================== */}
-      <section className="py-20 overflow-hidden" style={{ backgroundColor: "#0E0E0E", borderTop: "1px solid rgba(255,255,255,0.05)", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-        <div className="text-center mb-14">
-          <p className="text-brand-purple font-semibold text-xs tracking-[0.25em] uppercase">
-            Clients &amp; Partners
-          </p>
-        </div>
+      <section className="py-28 lg:py-36 overflow-hidden" style={{ backgroundColor: "#0E0E0E", borderTop: "1px solid rgba(255,255,255,0.05)", borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+        <SectionHeading
+          eyebrow="Our Network"
+          title="Clients &"
+          highlight="Partners"
+        />
         <ClientsCarousel />
       </section>
 

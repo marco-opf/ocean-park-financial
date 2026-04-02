@@ -1,22 +1,22 @@
 'use client';
 
 const clients = [
-  { name: "Silicon Valley Bank",              src: "https://logo.clearbit.com/svb.com" },
-  { name: "Science Inc.",                     src: "https://logo.clearbit.com/science-inc.com" },
-  { name: "Pray",                             src: "https://logo.clearbit.com/pray.com" },
-  { name: "Biite",                            src: "https://logo.clearbit.com/biite.club" },
-  { name: "E-Studio",                         src: "https://logo.clearbit.com/estudio.co" },
-  { name: "Suu",                              src: "https://logo.clearbit.com/enjoysuu.com" },
-  { name: "BeatPitch",                        src: "https://logo.clearbit.com/beatpitch.ai" },
-  { name: "Lunch Bunch",                      src: "https://logo.clearbit.com/lunchbunch.com" },
-  { name: "Lunch Bunch Community Foundation", src: "https://logo.clearbit.com/lunchbunchcf.org" },
-  { name: "Final Boss Sour",                  src: "https://logo.clearbit.com/finalbosssour.com" },
-  { name: "Fora Partners",                    src: "https://logo.clearbit.com/forapartners.com" },
-  { name: "Cognitik",                         src: "https://logo.clearbit.com/cognitik.com" },
-  { name: "Adlogica",                         src: "https://logo.clearbit.com/adlogica.io" },
-  { name: "QuickBooks",                       src: "https://logo.clearbit.com/quickbooks.intuit.com" },
-  { name: "AWS",                              src: "https://logo.clearbit.com/aws.amazon.com" },
-  { name: "Bill",                             src: "https://logo.clearbit.com/bill.com" },
+  { name: "Silicon Valley Bank",              src: "https://icon.horse/icon/svb.com" },
+  { name: "Science Inc.",                     src: "https://icon.horse/icon/science-inc.com" },
+  { name: "Pray",                             src: "https://icon.horse/icon/pray.com" },
+  { name: "Biite",                            src: "https://icon.horse/icon/biite.club" },
+  { name: "E-Studio",                         src: "https://icon.horse/icon/estudio.co" },
+  { name: "Suu",                              src: "https://icon.horse/icon/enjoysuu.com" },
+  { name: "BeatPitch",                        src: "https://icon.horse/icon/beatpitch.ai" },
+  { name: "Lunch Bunch",                      src: "https://icon.horse/icon/lunchbunch.com" },
+  { name: "Lunch Bunch Community Foundation", src: "https://icon.horse/icon/lunchbunchcf.org" },
+  { name: "Final Boss Sour",                  src: "https://icon.horse/icon/finalbosssour.com" },
+  { name: "Fora Partners",                    src: "https://icon.horse/icon/forapartners.com" },
+  { name: "Cognitik",                         src: "https://icon.horse/icon/cognitik.com" },
+  { name: "Adlogica",                         src: "https://icon.horse/icon/adlogica.io" },
+  { name: "QuickBooks",                       src: "https://icon.horse/icon/quickbooks.intuit.com" },
+  { name: "AWS",                              src: "https://icon.horse/icon/aws.amazon.com" },
+  { name: "Bill",                             src: "https://icon.horse/icon/bill.com" },
 ];
 
 export default function ClientsCarousel() {
@@ -44,11 +44,11 @@ export default function ClientsCarousel() {
               src={client.src}
               alt={client.name}
               style={{
-                maxHeight: 36,
-                maxWidth: 140,
+                height: 40,
+                width: 40,
                 objectFit: "contain",
                 filter: "brightness(0) invert(1)",
-                opacity: 0.55,
+                opacity: 0.65,
               }}
               onError={(e) => {
                 const img = e.currentTarget as HTMLImageElement;
