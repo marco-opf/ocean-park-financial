@@ -11,12 +11,9 @@ const clients = [
   { name: "Lunch Bunch",                      src: "/logos/lunchbunch.png" },
   { name: "Lunch Bunch Community Foundation", src: "/logos/lbcf.png" },
   { name: "Final Boss Sour",                  src: "/logos/finalboss.png" },
-  { name: "Fora Partners",                    src: "https://icon.horse/icon/forapartners.com" },
   { name: "Cognitik",                         src: "/logos/cognitik.svg" },
   { name: "Adlogica",                         src: "/logos/adlogica.png" },
   { name: "QuickBooks",                       src: "/logos/intuit.png" },
-  { name: "AWS",                              src: "https://icon.horse/icon/aws.amazon.com" },
-  { name: "Bill",                             src: "https://icon.horse/icon/bill.com" },
 ];
 
 export default function ClientsCarousel() {
