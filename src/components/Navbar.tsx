@@ -58,7 +58,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-2 h-10 bg-brand-purple rounded-full group-hover:h-12 transition-all duration-300" />
+            <img
+              src="/opf-logo.png"
+              alt="Ocean Park Financial"
+              className="w-11 h-11 transition-transform duration-300 group-hover:scale-110"
+            />
             <div>
               <span className="text-xl font-bold text-white tracking-tight">
                 Ocean Park

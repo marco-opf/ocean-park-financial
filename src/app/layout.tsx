@@ -7,6 +7,15 @@ export const metadata: Metadata = {
   title: "Ocean Park Financial | Fractional CFO & Financial Advisory",
   description:
     "White-glove financial advisory services for Tech, Media, CPG, and VC companies. Led by Toni Peneva, CPA — from Wall Street to Silicon Beach.",
+  icons: {
+    icon: [
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
+    shortcut: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({

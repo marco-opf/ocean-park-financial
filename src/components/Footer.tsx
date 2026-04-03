@@ -10,7 +10,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-2 h-10 bg-brand-purple rounded-full" />
+              <img
+                src="/opf-logo.png"
+                alt="Ocean Park Financial"
+                className="w-10 h-10"
+              />
               <div>
                 <span className="text-lg font-bold text-white">Ocean Park</span>
                 <span className="block text-xs text-brand-purple font-medium tracking-widest uppercase">
