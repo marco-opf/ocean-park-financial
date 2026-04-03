@@ -2,8 +2,8 @@
 
 const clients = [
   { name: "Silicon Valley Bank",              src: "/logos/svb.png",        filter: "none",                    maxH: 72,  maxW: 320, opacity: 0.85 },
-  { name: "Science Inc.",                     src: "/logos/scienceinc.png", filter: "brightness(0) invert(1)", maxH: 72,  maxW: 320, opacity: 0.70 },
-  { name: "Pray",                             src: "/logos/pray.png",       filter: "brightness(0) invert(1)", maxH: 72,  maxW: 320, opacity: 0.70 },
+  { name: "Science Inc.",                     src: "/logos/scienceinc.png", filter: "none",                    maxH: 72,  maxW: 320, opacity: 0.90 },
+  { name: "Pray",                             src: "/logos/pray.png",       filter: "brightness(0) invert(1)", maxH: 72,  maxW: 320, opacity: 0.75 },
   { name: "Biite",                            src: "/logos/biite.png",      filter: "brightness(0) invert(1)", maxH: 108, maxW: 480, opacity: 0.70 },
   { name: "Skybound",                         src: "/logos/skybound.png",   filter: "none",                    maxH: 108, maxW: 480, opacity: 0.85 },
   { name: "Suu",                              src: "/logos/suu.png",        filter: "none",                    maxH: 44,  maxW: 200, opacity: 0.85 },
@@ -11,9 +11,10 @@ const clients = [
   { name: "Lunch Bunch",                      src: "/logos/lunchbunch.png", filter: "none",                    maxH: 72,  maxW: 320, opacity: 0.85 },
   { name: "Lunch Bunch Community Foundation", src: "/logos/lbcf.png",       filter: "none",                    maxH: 72,  maxW: 320, opacity: 0.85 },
   { name: "Final Boss Sour",                  src: "/logos/finalboss.png",  filter: "none",                    maxH: 72,  maxW: 320, opacity: 0.85 },
-  { name: "Cognitik",                         src: "/logos/cognitik.svg",   filter: "brightness(0) invert(1)", maxH: 72,  maxW: 320, opacity: 0.70 },
+  { name: "Cognitik",                         src: "/logos/cognitik.svg",   filter: "none",                    maxH: 72,  maxW: 320, opacity: 0.85 },
   { name: "Adlogica",                         src: "/logos/adlogica.png",   filter: "brightness(0) invert(1)", maxH: 108, maxW: 480, opacity: 0.70 },
   { name: "QuickBooks",                       src: "/logos/intuit.png",     filter: "none",                    maxH: 72,  maxW: 320, opacity: 0.85 },
+  { name: "AWS",                              src: "/logos/aws.svg",        filter: "none",                    maxH: 56,  maxW: 120, opacity: 0.85 },
 ];
 
 export default function ClientsCarousel() {

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 196">
+  <!-- Main blob shape: circle with pointed lower-right tail (like a wave/ocean drop) -->
+  <path
+    d="M 96 6
+       C 150 6, 188 44, 188 92
+       C 188 128, 170 152, 172 165
+       C 173 173, 165 179, 156 168
+       C 140 151, 118 174, 90 178
+       C 44 178, 8 144, 8 98
+       C 8 52, 44 6, 96 6 Z"
+    fill="#72C4E2"
+    stroke="#1B3A5C"
+    stroke-width="6"
+    stroke-linejoin="round"
+  />
+
+  <!-- Ferris wheel outer ring -->
+  <circle cx="118" cy="88" r="54" fill="none" stroke="#1B3A5C" stroke-width="4.5"/>
+
+  <!-- Center hub -->
+  <circle cx="118" cy="88" r="8" fill="#1B3A5C"/>
+
+  <!-- 6 Spokes (every 60°) -->
+  <!-- 0°  → right  (118+54, 88)    = (172, 88)  -->
+  <!-- 60° → lower-right            = (145, 135) -->
+  <!-- 120°→ lower-left             = (91,  135) -->
+  <!-- 180°→ left   (118-54, 88)    = (64,  88)  -->
+  <!-- 240°→ upper-left             = (91,  41)  -->
+  <!-- 300°→ upper-right            = (145, 41)  -->
+  <line x1="118" y1="88" x2="172" y2="88"  stroke="#1B3A5C" stroke-width="2.5"/>
+  <line x1="118" y1="88" x2="145" y2="135" stroke="#1B3A5C" stroke-width="2.5"/>
+  <line x1="118" y1="88" x2="91"  y2="135" stroke="#1B3A5C" stroke-width="2.5"/>
+  <line x1="118" y1="88" x2="64"  y2="88"  stroke="#1B3A5C" stroke-width="2.5"/>
+  <line x1="118" y1="88" x2="91"  y2="41"  stroke="#1B3A5C" stroke-width="2.5"/>
+  <line x1="118" y1="88" x2="145" y2="41"  stroke="#1B3A5C" stroke-width="2.5"/>
+
+  <!-- Gondola dots at rim -->
+  <circle cx="172" cy="88"  r="7" fill="#1B3A5C"/>
+  <circle cx="145" cy="135" r="7" fill="#1B3A5C"/>
+  <circle cx="91"  cy="135" r="7" fill="#1B3A5C"/>
+  <circle cx="64"  cy="88"  r="7" fill="#1B3A5C"/>
+  <circle cx="91"  cy="41"  r="7" fill="#1B3A5C"/>
+  <circle cx="145" cy="41"  r="7" fill="#1B3A5C"/>
+
+  <!-- Support legs from bottom of wheel to ground -->
+  <line x1="118" y1="142" x2="96"  y2="170" stroke="#1B3A5C" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="118" y1="142" x2="140" y2="170" stroke="#1B3A5C" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- Palm tree trunk (curves up from lower-left) -->
+  <path d="M 36 172 C 38 150, 44 128, 54 102"
+        fill="none" stroke="#1B3A5C" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Palm fronds (5 fronds spreading from trunk tip) -->
+  <path d="M 54 102 C 40 92, 24 90, 14 82"
+        fill="none" stroke="#1B3A5C" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 54 102 C 46 88, 40 72, 36 60"
+        fill="none" stroke="#1B3A5C" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 54 102 C 54 86, 56 70, 58 58"
+        fill="none" stroke="#1B3A5C" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 54 102 C 62 90, 70 80, 80 74"
+        fill="none" stroke="#1B3A5C" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 54 102 C 58 96, 66 93, 74 92"
+        fill="none" stroke="#1B3A5C" stroke-width="3.5" stroke-linecap="round"/>
+</svg>
