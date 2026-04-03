@@ -182,25 +182,40 @@ export default function Home() {
 
             <div className="relative">
               <div
-                className="aspect-[4/5] rounded-3xl flex items-center justify-center relative overflow-hidden"
-                style={{
-                  background:
-                    "linear-gradient(135deg, rgba(183,148,246,0.15) 0%, rgba(183,148,246,0.03) 100%)",
-                  border: "1px solid rgba(183,148,246,0.2)",
-                }}
+                className="aspect-[4/5] rounded-3xl relative overflow-hidden"
+                style={{ border: "1px solid rgba(183,148,246,0.2)" }}
               >
-                <div className="text-center px-10">
-                  <img
-                    src="/toni-peneva.png"
-                    alt="Toni Peneva, CPA"
-                    className="w-32 h-32 mx-auto mb-8 rounded-full object-cover object-top"
-                  />
+                {/* Photo fills top ~65% of card */}
+                <img
+                  src="/toni-peneva.png"
+                  alt="Toni Peneva, CPA"
+                  className="absolute inset-x-0 top-0 w-full object-cover object-top"
+                  style={{ height: "65%" }}
+                />
+                {/* Dark background for bottom */}
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, rgba(183,148,246,0.15) 0%, rgba(183,148,246,0.03) 100%)",
+                  }}
+                />
+                {/* Gradient fade from photo into dark */}
+                <div
+                  className="absolute inset-x-0"
+                  style={{
+                    top: "50%",
+                    bottom: 0,
+                    background: "linear-gradient(to bottom, transparent, #0E0E0E 55%)",
+                  }}
+                />
+                {/* Text anchored to bottom */}
+                <div className="absolute bottom-0 left-0 right-0 text-center px-10 pb-10">
                   <p className="text-white font-bold text-2xl mb-2">Toni Peneva, CPA</p>
-                  <p className="text-brand-gray-400 text-base mb-1">Founder &amp; CEO</p>
-                  <p className="text-brand-gray-500 text-sm">Santa Monica, California</p>
+                  <p className="text-brand-gray-400 text-base">Founder &amp; CEO</p>
                 </div>
                 {/* left accent */}
-                <div className="absolute left-0 top-0 bottom-0 w-1 bg-brand-purple" />
+                <div className="absolute left-0 top-0 bottom-0 w-1 bg-brand-purple z-10" />
               </div>
             </div>
           </div>

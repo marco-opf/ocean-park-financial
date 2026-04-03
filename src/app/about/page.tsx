@@ -77,26 +77,31 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-5 gap-16 items-start">
             <div className="lg:col-span-2">
               <div className="sticky top-28">
-                <div className="aspect-[3/4] rounded-2xl bg-gradient-to-br from-brand-purple/20 to-brand-purple/5 border border-brand-purple/20 flex items-center justify-center relative overflow-hidden">
-                  <div className="text-center p-8">
-                    <img
-                      src="/toni-peneva.png"
-                      alt="Toni Peneva, CPA"
-                      className="w-28 h-28 mx-auto mb-6 rounded-full object-cover object-top"
-                    />
+                <div className="aspect-[3/4] rounded-2xl border border-brand-purple/20 relative overflow-hidden">
+                  {/* Photo fills top ~65% of card */}
+                  <img
+                    src="/toni-peneva.png"
+                    alt="Toni Peneva, CPA"
+                    className="absolute inset-x-0 top-0 w-full object-cover object-top"
+                    style={{ height: "65%" }}
+                  />
+                  {/* Gradient fade from photo into dark */}
+                  <div
+                    className="absolute inset-x-0"
+                    style={{
+                      top: "50%",
+                      bottom: 0,
+                      background: "linear-gradient(to bottom, transparent, #0a0a1a 55%)",
+                    }}
+                  />
+                  {/* Text anchored to bottom */}
+                  <div className="absolute bottom-0 left-0 right-0 text-center px-8 pb-8">
                     <p className="text-white font-bold text-2xl mb-1">Toni Peneva</p>
-                    <p className="text-brand-purple text-sm font-medium mb-4">CPA</p>
+                    <p className="text-brand-purple text-sm font-medium mb-3">CPA</p>
                     <p className="text-brand-gray-400 text-sm">Founder &amp; CEO</p>
                     <p className="text-brand-gray-400 text-sm">Ocean Park Financial, LLC</p>
-                    <p className="text-brand-gray-400 text-sm mt-1">Santa Monica, California</p>
-
-                    <div className="mt-8 pt-6 border-t border-white/10">
-                      <p className="text-brand-gray-400 text-xs mb-3">Education</p>
-                      <p className="text-white text-sm font-medium">B.S. Business Administration</p>
-                      <p className="text-brand-gray-400 text-xs">Eastern Oregon University</p>
-                    </div>
                   </div>
-                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-brand-purple" />
+                  <div className="absolute left-0 top-0 bottom-0 w-1 bg-brand-purple z-10" />
                 </div>
               </div>
             </div>

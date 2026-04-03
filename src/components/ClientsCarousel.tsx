@@ -1,19 +1,19 @@
 'use client';
 
 const clients = [
-  { name: "Silicon Valley Bank",              src: "/logos/svb.png" },
-  { name: "Science Inc.",                     src: "/logos/scienceinc.png" },
-  { name: "Pray",                             src: "/logos/pray.png" },
-  { name: "Biite",                            src: "/logos/biite.png" },
-  { name: "Skybound",                         src: "/logos/skybound.png" },
-  { name: "Suu",                              src: "/logos/suu.png" },
-  { name: "BeatPitch",                        src: "/logos/beatpitch.png" },
-  { name: "Lunch Bunch",                      src: "/logos/lunchbunch.png" },
-  { name: "Lunch Bunch Community Foundation", src: "/logos/lbcf.png" },
-  { name: "Final Boss Sour",                  src: "/logos/finalboss.png" },
-  { name: "Cognitik",                         src: "/logos/cognitik.svg" },
-  { name: "Adlogica",                         src: "/logos/adlogica.png" },
-  { name: "QuickBooks",                       src: "/logos/intuit.png" },
+  { name: "Silicon Valley Bank",              src: "/logos/svb.png",        filter: "none",                    maxH: 72,  maxW: 320, opacity: 0.85 },
+  { name: "Science Inc.",                     src: "/logos/scienceinc.png", filter: "brightness(0) invert(1)", maxH: 72,  maxW: 320, opacity: 0.70 },
+  { name: "Pray",                             src: "/logos/pray.png",       filter: "brightness(0) invert(1)", maxH: 72,  maxW: 320, opacity: 0.70 },
+  { name: "Biite",                            src: "/logos/biite.png",      filter: "brightness(0) invert(1)", maxH: 108, maxW: 480, opacity: 0.70 },
+  { name: "Skybound",                         src: "/logos/skybound.png",   filter: "none",                    maxH: 108, maxW: 480, opacity: 0.85 },
+  { name: "Suu",                              src: "/logos/suu.png",        filter: "none",                    maxH: 44,  maxW: 200, opacity: 0.85 },
+  { name: "BeatPitch",                        src: "/logos/beatpitch.png",  filter: "brightness(0) invert(1)", maxH: 72,  maxW: 320, opacity: 0.70 },
+  { name: "Lunch Bunch",                      src: "/logos/lunchbunch.png", filter: "none",                    maxH: 72,  maxW: 320, opacity: 0.85 },
+  { name: "Lunch Bunch Community Foundation", src: "/logos/lbcf.png",       filter: "none",                    maxH: 72,  maxW: 320, opacity: 0.85 },
+  { name: "Final Boss Sour",                  src: "/logos/finalboss.png",  filter: "none",                    maxH: 72,  maxW: 320, opacity: 0.85 },
+  { name: "Cognitik",                         src: "/logos/cognitik.svg",   filter: "brightness(0) invert(1)", maxH: 72,  maxW: 320, opacity: 0.70 },
+  { name: "Adlogica",                         src: "/logos/adlogica.png",   filter: "brightness(0) invert(1)", maxH: 108, maxW: 480, opacity: 0.70 },
+  { name: "QuickBooks",                       src: "/logos/intuit.png",     filter: "none",                    maxH: 72,  maxW: 320, opacity: 0.85 },
 ];
 
 export default function ClientsCarousel() {
@@ -41,11 +41,11 @@ export default function ClientsCarousel() {
               src={client.src}
               alt={client.name}
               style={{
-                maxHeight: 72,
-                maxWidth: 320,
+                maxHeight: client.maxH,
+                maxWidth: client.maxW,
                 objectFit: "contain",
-                filter: "brightness(0) invert(1)",
-                opacity: 0.7,
+                filter: client.filter,
+                opacity: client.opacity,
               }}
               onError={(e) => {
                 const img = e.currentTarget as HTMLImageElement;
